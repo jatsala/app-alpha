@@ -16,7 +16,7 @@
 
 import AppExpress from "@itznotabug/appexpress"
 const app = new AppExpress()
-import userRoutes from './routes/user'
+import userRoutes from './routes/user.js'
 
 app.use("/user", userRoutes)
 
