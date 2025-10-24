@@ -21,12 +21,10 @@ const router = express.Router()
 // router.get("/:username", controller.getUser)
 // router.post("/", controller.createUser)
 
-router
-    .route('/:username')
+router.route('/:username')
     .get(controller.getUser)
 
-router
-    .route('/')
+router.route('/')
     .post(controller.createUser)
 
 // export default router
