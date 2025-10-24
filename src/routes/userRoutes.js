@@ -29,5 +29,6 @@ router
     .route('/')
     .post(controller.createUser)
 
-export default router
+// export default router
+module.exports = router
 
