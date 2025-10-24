@@ -21,8 +21,16 @@ const router = new AppExpress.Router()
 //     .get(controller.getUser)
 //     .post(controller.createUser)
 
-router.get("/:username", controller.getUser)
-router.post("/", controller.createUser)
+router
+    .route('/:username')
+    .get(controller.getUser)
+
+router
+    .route('/')
+    .post(controller.createUser)
+
+// router.get("/:username", controller.getUser)
+// router.post("/", controller.createUser)
 
 export default router
 // module.exports = router
