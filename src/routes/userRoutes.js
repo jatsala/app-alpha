@@ -22,3 +22,4 @@ router
     .post(controller.createUser)
 
 export default router
+// module.exports = router
