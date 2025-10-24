@@ -1,5 +1,5 @@
 import AppExpress from "@itznotabug/appexpress"
-import * as controller from '../controllers/userController.js'
+import * as controller from '../controllers/userController'
 
 const router = new AppExpress.Router()
 
@@ -16,21 +16,8 @@ const router = new AppExpress.Router()
 // router.get("/:username", getUser)
 // router.post("/", createUser)
 
-// router
-//     .route('/:username')
-//     .get(controller.getUser)
-//     .post(controller.createUser)
-
-router
-    .route('/:username')
-    .get(controller.getUser)
-
-router
-    .route('/')
-    .post(controller.createUser)
-
-// router.get("/:username", controller.getUser)
-// router.post("/", controller.createUser)
+router.get("/:username", controller.getUser)
+router.post("/", controller.createUser)
 
 export default router
-// module.exports = router
+
