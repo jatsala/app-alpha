@@ -2,12 +2,12 @@ import AppExpress from "@itznotabug/appexpress"
 const router = new AppExpress.Router()
 
 const getUser = (req, res) => {
-    const { username } = request.params
+    const { username } = req.params
     res.json({ 'username': username })
 }
 
 const createUser = (req, res) => {
-    res.json({ 'postData': request.body })
+    res.json({ 'postData': req.body })
 }
 
 router.get("/:username", getUser)
