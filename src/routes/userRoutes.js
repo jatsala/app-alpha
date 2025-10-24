@@ -21,5 +21,5 @@ router
     .get(controller.getUser)
     .post(controller.createUser)
 
-// export default router
-module.exports = router
+export default router
+// module.exports = router

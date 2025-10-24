@@ -9,10 +9,11 @@ app.middleware(authMiddleware)
 // Routes
 app.use("/user", userRoutes)
 
-// const getRoutes = (req, res, next, log, error) => {
-//     res.json({ routes: ["/", "/user/:username", "/user"] })
-// }
+const getRoutes = (req, res, next, log, error) => {
+    res.json({ routes: ["/", "/user/:username", "/user"] })
+}
 
 app.get("/", getRoutes)
 
-// export default async (context) => await app.attach(context)
+// Appwrite Function Entrypoint!
+export default async (context) => await app.attach(context)
