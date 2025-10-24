@@ -1,4 +1,4 @@
-const authMiddleware = (req, __, log, error) => {
+const authMiddleware = ({ req, __, log, error }) => {
     const { token } = req.headers;
 
     if (!token) {
