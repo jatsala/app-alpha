@@ -1,5 +1,5 @@
-const authMiddleware = (request, __, log) => {
-    const { token } = request.headers;
+const authMiddleware = (req, __, log) => {
+    const { token } = req.headers;
 
     if (!token) {
         log("No token");

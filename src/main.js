@@ -6,8 +6,8 @@ import authMiddleware from './middleware/auth.js'
 app.middleware(authMiddleware)
 app.use("/user", userRoutes)
 
-const getRoutes = (request, response) => {
-    response.json({ routes: ["/", "/user/:username", "/user"] })
+const getRoutes = (req, res) => {
+    res.json({ routes: ["/", "/user/:username", "/user"] })
 }
 
 app.get("/", getRoutes)
