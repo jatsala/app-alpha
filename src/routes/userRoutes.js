@@ -1,5 +1,5 @@
 import AppExpress from "@itznotabug/appexpress"
-import * as controller from '../controllers/userController'
+import * as controller from '../controllers/userController.js'
 
 const router = new AppExpress.Router()
 
