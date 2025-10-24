@@ -27,6 +27,6 @@ router.route('/:username')
 
 
 
-// export default router
-module.exports = router
+export default router
+
 
