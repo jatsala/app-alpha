@@ -1,6 +1,10 @@
 //import { } from '../utils/appError.js'
 
 /**Test EndPoint */
+// exports.getUser = async (req, res) => {
+
+// }
+
 export function getUser(req, res) {
     const { username } = req.params
     res.json({

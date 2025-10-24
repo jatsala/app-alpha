@@ -1,9 +1,7 @@
-// import AppExpress from "@itznotabug/appexpress"
-import * as express from 'express'
+import AppExpress from "@itznotabug/appexpress"
 import * as controller from '../controllers/userController.js'
 
-// const router = new AppExpress.Router()
-const router = express.Router()
+const router = new AppExpress.Router()
 
 // const getUser = (req, res, log, error) => {
 //     const { username } = req.params
