@@ -4,7 +4,7 @@
 export function getUser(req, res, log, error) {
     const { username } = req.params
     res.json({
-        'status': "200",
+        'status': 200,
         'username': username
     })
 }
@@ -12,7 +12,7 @@ export function getUser(req, res, log, error) {
 export function createUser(req, res, log, error) {
     const { data } = req.body
     res.json({
-        'status': "201",
+        'status': 201,
         'postData': data
     })
 }
