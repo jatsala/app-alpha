@@ -1,4 +1,4 @@
-import { appwriteConfig } from '../lib/appwrite.js'
+import { PROJECT_ID } from '../lib/appwrite.js'
 /* First EndPoin */
 export function getUser(req, res, log, error) {
     const { username } = req.params
@@ -6,8 +6,7 @@ export function getUser(req, res, log, error) {
         'status': 200,
         'username': username,
         'projectId': appwriteConfig.PROJECT_ID,
-        'databaseId': appwriteConfig.DATABASE_ID,
-        'collectionId': appwriteConfig.COLLECTION_ID
+
     })
 }
 
