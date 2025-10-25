@@ -5,7 +5,7 @@ export function getUser(req, res, log, error) {
     res.json({
         'status': 200,
         'username': username,
-        'projectId': appwriteConfig.PROJECT_ID,
+        'projectId': PROJECT_ID,
 
     })
 }
