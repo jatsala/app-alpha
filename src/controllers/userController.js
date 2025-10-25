@@ -5,7 +5,7 @@
 
 // }
 
-export function getUser(req, res) {
+export function getUser(req, res, log, error) {
     const { username } = req.params
     res.json({
         'status': 200,
@@ -13,7 +13,7 @@ export function getUser(req, res) {
     })
 }
 
-export function createUser(req, res) {
+export function createUser(req, res, log, error) {
     const { data } = req.body
     res.json({
         'status': 201,
