@@ -4,7 +4,7 @@ export function getUser(req, res, log, error) {
     res.json({ 'username': username })
 }
 
-export function (req, res, log, error) {
+export function createUser(req, res, log, error) {
     const { data } = req.body
     res.json({ 'postData': data })
 }
