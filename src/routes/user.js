@@ -7,7 +7,8 @@ const getUser = (req, res, log, error) => {
 }
 
 const createUser = ({ req, res, log, error }) => {
-    res.json({ 'postData': req.body })
+    const { data } = req.body
+    res.json({ 'postData': data })
 }
 
 router.get("/:username", getUser)
