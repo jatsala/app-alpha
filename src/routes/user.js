@@ -6,7 +6,7 @@ const getUser = (req, res, log, error) => {
     res.json({ 'username': username })
 }
 
-const createUser = ({ req, res, log, error }) => {
+const createUser = (req, res, log, error) => {
     const { data } = req.body
     res.json({ 'postData': data })
 }
