@@ -6,7 +6,7 @@ export function getUser(req, res, log, error) {
         'status': 200,
         'username': username,
         'projectId': appwriteConfig.PROJECT_ID,
-
+        'databaseId' appwriteConfig.DATABASE_ID,
     })
 }
 
