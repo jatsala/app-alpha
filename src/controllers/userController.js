@@ -1,4 +1,6 @@
-import { appwriteConfig, db } from '../lib/appwrite.js'
+import { appwriteConfig, client } from '../lib/appwrite.js'
+import { Databases } from 'node-appwrite'
+
 /* First EndPoin */
 export async function getUser(req, res, log, error) {
     // const { username } = req.params
@@ -11,6 +13,7 @@ export async function getUser(req, res, log, error) {
 
 
     const { username } = req.params
+    const db = new Databases(client);
     const response = await db.listDocuments({
         databaseId: appwriteConfig.DATABASE_ID,
         collectionId: appwriteConfig.COLLECTION_ID,

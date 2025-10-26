@@ -6,11 +6,11 @@ export const appwriteConfig = {
     DATABASE_ID: process.env.DATABASE_ID,
 }
 
-export const client = new Client()
+export const client = new Client();
     .setEndpoint('https://nyc.cloud.appwrite.io/v1')
     .setProject(appwriteConfig.PROJECT_ID);
 
-export const db = new Databases(client);
+// export const db = new Databases(client);
 
 
 
