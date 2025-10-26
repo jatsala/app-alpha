@@ -1,4 +1,4 @@
-// import { Client, Databases } from 'node-appwrite'
+import { Client, Databases } from 'node-appwrite'
 
 export const appwriteConfig = {
     PROJECT_ID: process.env.PROJECT_ID,
@@ -6,7 +6,11 @@ export const appwriteConfig = {
     DATABASE_ID: process.env.DATABASE_ID,
 }
 
-// export const PROJECT_ID = process.env.PROJECT_ID
-// export const DATABASE_ID = process.env.DATABASE_ID
-// export const COLLECTION_ID = process.env.COLLECTION_ID
+export const client = new Client()
+    .setEndpoint('https://nyc.cloud.appwrite.io/v1')
+    .setProject(appwriteConfig.PROJECT_ID);
+
+export const db = new Databases(client);
+
+
 
