@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@itznotabug/appexpress": "^0.2.7",
+    "appwrite": "^21.2.1",
     "node-appwrite": "^9.0.0"
   },
   "devDependencies": {

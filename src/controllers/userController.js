@@ -1,5 +1,7 @@
 import { appwriteConfig, client } from '../lib/appwrite.js'
-import { Databases } from 'node-appwrite'
+// import { Databases } from 'node-appwrite'
+import { Databases } from 'appwrite'
+
 
 /* First EndPoin */
 export async function getUser(req, res, log, error) {
@@ -16,7 +18,7 @@ export async function getUser(req, res, log, error) {
     const db = new Databases(client);
     const response = await db.listDocuments({
         databaseId: appwriteConfig.DATABASE_ID,
-        tableId: appwriteConfig.COLLECTION_ID,
+        collectionId: appwriteConfig.COLLECTION_ID,
     });
     res.json({
         'status': 200,
