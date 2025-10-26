@@ -1,6 +1,6 @@
 import { appwriteConfig, client } from '../lib/appwrite.js'
 // import { Databases } from 'node-appwrite'
-import { Databases } from 'appwrite'
+import { Databases, } from 'appwrite'
 
 
 /* First EndPoin */

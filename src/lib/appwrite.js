@@ -1,4 +1,5 @@
-import { Client, Databases } from 'node-appwrite'
+// import { Client, Databases } from 'node-appwrite'
+import { Client, } from 'appwrite'
 
 export const appwriteConfig = {
     PROJECT_ID: process.env.PROJECT_ID,
