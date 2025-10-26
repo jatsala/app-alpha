@@ -6,6 +6,7 @@
 //     DATABASE_ID: process.env.DATABASE_ID,
 // }
 
+/**TODO: Generar una nueva BD, no se puede tener dos funciones trabajando con una misma BD */
 export const PROJECT_ID = process.env.PROJECT_ID
 export const DATABASE_ID = process.env.DATABASE_ID
 export const COLLECTION_ID = process.env.COLLECTION_ID

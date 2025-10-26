@@ -6,7 +6,7 @@ export function getUser(req, res, log, error) {
         'status': 200,
         'username': username,
         'projectId': PROJECT_ID,
-        'databaseId' DATABASE_ID,
+        'databaseId': DATABASE_ID,
     })
 }
 
