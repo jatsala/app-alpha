@@ -9,20 +9,20 @@ export async function getUser(req, res, log, error) {
     //     'databaseId': appwriteConfig.DATABASE_ID,
     // })
 
-    if (req.method === 'GET') {
-        const { username } = req.params
-        const response = await db.listDocuments({
-            databaseId: appwriteConfig.DATABASE_ID,
-            collectionId: appwriteConfig.COLLECTION_ID,
-        });
-        res.json({
-            'status': 200,
-            'username': username,
-            'documents': response.documents
-        })
-    }
 
-    res.send('Hello World!!!')
+    const { username } = req.params
+    const response = await db.listDocuments({
+        databaseId: appwriteConfig.DATABASE_ID,
+        collectionId: appwriteConfig.COLLECTION_ID,
+    });
+    res.json({
+        'status': 200,
+        'username': username,
+        'documents': response.documents
+    })
+
+
+    // res.send('Hello World!!!')
 
 }
 
