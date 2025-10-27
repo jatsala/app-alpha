@@ -14,7 +14,7 @@ export const client = new Client()
 
 // export const db = new Databases(client);
 
-export tablesDB = new TablesDB(client)
+export const tablesDB = new TablesDB(client);
 
 
 
