@@ -1,15 +1,24 @@
-import { appwriteConfig, client, db, } from '../lib/appwrite.js'
+import { appwriteConfig, tablesDB, } from '../lib/appwrite.js'
 
 /* First EndPoin */
 export async function getUser(req, res, log, error) {
     const { username } = req.params
-    const response = await db.listDocuments({
+    // const response = await db.listDocuments({
+    //     databaseId: appwriteConfig.DATABASE_ID,
+    //     collectionId: appwriteConfig.COLLECTION_ID,
+    // });
+    // res.json({
+    //     'status': 200,
+    //     'username': username,
+    //     'documents': response.documents
+    // })
+    const response = await tablesDB.listRows({
         databaseId: appwriteConfig.DATABASE_ID,
-        collectionId: appwriteConfig.COLLECTION_ID,
+        tableId: appwriteConfig.COLLECTION_ID,
+        queries: [Query.select(["$id", "username", "bio"])]
     });
     res.json({
         'status': 200,
-        'username': username,
         'documents': response.documents
     })
 }
