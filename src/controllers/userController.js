@@ -14,12 +14,12 @@ export async function getUser(req, res, log, error) {
     //     'documents': response.documents
     // })
     const response = await tablesDB.listRows({
-        queries: [Query.select(['$id', 'username', 'bio'])]
+        databaseId: appwriteConfig.DATABASE_ID,
+        tableId: appwriteConfig.COLLECTION_ID,
+        queries: [Query.select(['$id', 'username', 'bio']), Query.orderAsc("username")]
     });
     res.json({
         'status': 200,
-        'databaseId': appwriteConfig.DATABASE_ID,
-        'tableId': appwriteConfig.COLLECTION_ID,
         'documents': response
     })
 }
