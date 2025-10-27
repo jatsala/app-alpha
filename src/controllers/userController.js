@@ -1,4 +1,4 @@
-import { appwriteConfig, tablesDB, } from '../lib/appwrite.js'
+import { appwriteConfig, client, tablesDB, } from '../lib/appwrite.js'
 import { Query, } from 'appwrite'
 
 /* First EndPoin */
@@ -20,7 +20,7 @@ export async function getUser(req, res, log, error) {
     });
     res.json({
         'status': 200,
-        'documents': response.documents
+        'documents': response
     })
 }
 
