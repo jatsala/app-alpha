@@ -17,7 +17,7 @@ export async function getUser(req, res, log, error) {
         databaseId: appwriteConfig.DATABASE_ID,
         tableId: appwriteConfig.COLLECTION_ID,
         queries: [
-            Query.notContains("$permissions", "$createdAt", "$updatedAt", "$sequence"),
+            Query.notContains("$createdAt", "$updatedAt"),
             Query.orderAsc('username')
         ]
     });
