@@ -17,8 +17,7 @@ export async function getUser(req, res, log, error) {
         databaseId: appwriteConfig.DATABASE_ID,
         tableId: appwriteConfig.COLLECTION_ID,
         queries: [
-            Query.notContains("createdAt", "updatedAt"),
-            Query.orderAsc('username')
+            Query.orderAsc('username'),
         ]
     });
     res.json({
