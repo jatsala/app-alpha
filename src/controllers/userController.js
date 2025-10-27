@@ -16,7 +16,7 @@ export async function getUser(req, res, log, error) {
     const response = await tablesDB.listRows({
         databaseId: appwriteConfig.DATABASE_ID,
         tableId: appwriteConfig.COLLECTION_ID,
-        queries: [Query.orderAsc("column")]
+        queries: [Query.orderAsc('username')]
     });
     res.json({
         'status': 200,
